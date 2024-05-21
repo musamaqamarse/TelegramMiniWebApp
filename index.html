@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+      <script>
+          function showDiv(id) {
+              // Get all the divs
+              var divs = ['tokenDiv', 'nftsDiv', 'activityDiv'];
+
+              // Hide all the divs
+              for (var i = 0; i < divs.length; i++) {
+                  document.getElementById(divs[i]).style.display = 'none';
+              }
+
+              // Show the div with the given id
+              document.getElementById(id).style.display = 'block';
+          }
+      </script>
+
   </head>
   <body style="background-color: black">
     <div class="container" style="text-align: center; margin-top: 100px;">
@@ -29,30 +45,17 @@
         <div id="tokenDiv">
             <h1 style="color: aliceblue">This is the Token div</h1>
         </div>
-        <div id="nftsDiv">
+        <div id="nftsDiv" style="display: none;">
             <h1 style="color: aliceblue">This is the NFTs div</h1>
         </div>
-        <div id="activityDiv">
+        <div id="activityDiv" style="display: none;">
             <h1 style="color: aliceblue">This is the Activity div</h1>
         </div>
 
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-        function showDiv(id) {
-            // Get all the divs
-            var divs = ['tokenDiv', 'nftsDiv', 'activityDiv'];
 
-            // Hide all the divs
-            for (var i = 0; i < divs.length; i++) {
-                document.getElementById(divs[i]).style.display = 'none';
-            }
-
-            // Show the div with the given id
-            document.getElementById(id).style.display = 'block';
-        }
-
-    </script>
   </body>
 </html>
